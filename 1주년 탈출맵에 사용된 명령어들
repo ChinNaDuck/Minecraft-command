@@ -1,0 +1,71 @@
+교문으로 들어갈 때 사용된 명령어
+    일반형/무조건/레드스톤  tp @a 467 12 124
+    연쇄형/조건/항상  fill 456 12 135 478 15 135 iron_block
+    연쇄형/조건/항상  playsound minecraft:block.anvil.land player @a 467 12 124 1 1 1
+    연쇄형/조건/항상  setblock 450 10 132 air
+
+교문에서 출력된 대사
+    일반형/무조건/레드스톤  title @a actionbar "교문이 육중한 소리를 내면서 잠겼다. 힘으로 열기에는 무리가 있어 보인다."
+    일반형/무조건/레드스톤  title @a actionbar "나갈 방법을 찾아보자."
+  
+정문에 들어간 후 사용된 명령어
+    반복형/무조건/레드스톤  execute at @a[x=467,y=13,z=56,dx=0,dy=0,dz=0] run title @a actionbar "정문이 잠겼다. 전자시스템에 의해 관리되는 것 같다."
+
+2층계단 앞에서 사용된 명령어
+    반복형/무조건/레드스톤  execute at @a[x=527,y=13,z=54,dx=0,dy=0,dz=0] run title @a[x=527,y=13,z=54,dx=0,dy=0,dz=0] actionbar "잠겨있다. 2층으로 올라가기 위해서는 열쇠가 필요하다."
+
+3층계단 앞에서 사용된 명령어
+    반복형/무조건/레드스톤  execute at @a[x=406,y=19,z=47,dx=0,dy=0,dz=0] run title @a[x=406,y=19,z=47,dx=0,dy=0,dz=0] actionbar "잠겨있다. 3층으로 올라가기 위해서는 열쇠가 필요하다."
+    
+3층 이상한 문 앞에서 사용된 명령어
+    반복형/무조건/레드스톤  execute at @a[x=528,y=25,z=54,dx=0,dy=0,dz=0] run title @a[x=528,y=25,z=54,dx=0,dy=0,dz=0] actionbar "잠겨있다. 문을 열기 위해서는 열쇠가 필요하다."
+    
+3층 폭포 앞에서 사용된 명령어
+    반복형/무조건/레드스톤  execute at @a[x=528,y=25,z=59,dx=0,dy=0,dz=0] run title @a[x=528,y=25,z=59,dx=0,dy=0,dz=0] actionbar "여기에 왜 이런 게 있지?"
+    
+4층 독가스 주입 명령어 중 하나
+    일반형/무조건/레드스톤  setblock 522 31 57 redstone_block
+    반복형/무조건/레드스톤  particle sneeze 503 36 47 2 2 2 0.1 150 force
+    
+4층 랜턴 명령어 중 하나
+    일반형/무조건/레드스톤  setblock 512 31 55 minecraft:lantern
+    
+4층 앞에서 출력된 대사
+    일반형/무조건/레드스톤  title @a title {"text":"빛을 향해 나아가라","color":"red"}
+    연쇄형/무조건/항상  fill 510 31 55 510 35 46 minecraft:air
+    
+4층 상자에서 출력된 대사
+    일반형/무조건/레드스톤  setblock 453 4 29 redstone_block
+    반복형/무조건/레드스톤  title @a title {"text":"정문은 열렸다","color":"red"}
+    연쇄형/조건/항상  setblock 466 13 68 air
+    연쇄형/조건/항상  setblock 468 13 68 air
+    연쇄형/조건/항상  setblock 447 4 28 redstone_block
+    연쇄형/조건/항상  setblock 453 4 29 air
+    연쇄형/조건/항상  setblock 447 4 28 air
+    
+지하 퍼즐에서 사용된 명령어
+    반복형/무조건/레드스톤  execute if block 465 8 68 minecraft:black_concrete run title @a title {"text":"엔더의 눈을 가졌군","color":"red"}
+    연쇄형/조건/항상  give @r[name=!ChinNaDuck] ender_eye 1
+    연쇄형/조건/항상  setblock 451 4 28 air
+    
+지하 포털 앞에서 출력된 대사
+    반복형/무조건/레드스톤  execute at @a[x=426,y=7,z=51,dx=0,dy=0,dz=0] run title @a actionbar "엔더월드로 가는 포털이 보인다. 엔더의 눈이 7개 부족해서 작동하지 않는다. 나머지를 직접 채워야될 것 같다."
+
+구CU고 앞에서 출력된 대사
+    반복형/무조건/레드스톤  execute at @a[x=-6,y=57,z=-1110,dx=0,dy=0,dz=0] run tp @a -100 62 -1162 facing -24 83 -1102
+    연쇄형/조건/항상  setblock -23 55 -1110 redstone_block
+    
+    반복형/무조건/레드스톤  execute at @a[x=-6,y=57,z=-1110,dx=0,dy=0,dz=0] run title @a[x=-6,y=57,z=-1110,dx=0,dy=0,dz=0] actionbar "여긴......"
+    연쇄형/무조건/항상  setblock -23 55 -1108 redstone_block
+    연쇄형/무조건/항상  setblock -23 55 -1110 air
+    
+    일반형/무조건/레드스톤  title @a actionbar "옛 CU고등학교이다..."
+    연쇄형/무조건/항상  setblock -21 55 -1101 redstone_block
+    연쇄형/무조건/항상  setblock -23 55 -1108 air
+    
+    일반형/무조건/레드스톤  title @a actionbar "어디에서도 발견하지 못했던 옛 CU고 건물이 엔더월드에서 발견되었다."
+    연쇄형/무조건/항상  setblock -23 55 -1094 redstone_block
+    연쇄형/무조건/항상  setblock -21 55 -1101 air
+    
+    일반형/무조건/레드스톤  title @a actionbar "설마 건물 전체를 여기로 이전시킨 건가......?"
+    연쇄형/무조건/항상  setblock -23 55 -1094 air
